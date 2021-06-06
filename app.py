@@ -8,6 +8,7 @@ app.config['DEBUG'] = False
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///weather.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'f576jbfiv7t47bu4787t7d36cx43wfvh457vtrwddfgtyscw67681'
+app.config.from_object(__name__)
 
 db = SQLAlchemy(app)
 
